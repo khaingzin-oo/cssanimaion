@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		button{
+			width: 300px;
+			height: 100px;
+			background-color: tomato;
+			color: #fff;
+			font-size: 27px;
+			border:none;
+			font-weight: bold;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			cursor: pointer;
+			clip-path: polygon(1% 1%, 100% 1%, 100% 56%, 73% 100%, 0 99%);
+
+			position: relative;
+			/**/
+		}
+		button::before{
+			content: "Thank You";
+
+			width: 100%;
+			height: 100%;
+			background-color: darkblue;
+			color: tomato;
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: 100px;
+			clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 500%);
+			transform: translateY(-100%);
+			transition: transform .3s;
+		}
+		button::after{
+			content: "Thank You";
+
+			width: 100%;
+			height: 100%;
+			background-color: steelblue;
+			color: #fff;
+			position: absolute;
+			left: 0;
+			top: 0;
+			line-height: 100px;
+			clip-path: polygon(1% 1%, 100% 0, 100% 50%, 0 50%);
+			transform: translateY(100%);
+			transition: transform .3s;
+		}
+
+		button:hover::before{
+			transform: translateY(0);
+	
+		}
+		button:hover::after{
+			transform: translateY(0);
+		}
+	</style>
+</head>
+<body>
+	<button type="button">Hover Me</button>
+</body>
+</html>

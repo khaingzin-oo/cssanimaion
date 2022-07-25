@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate 3D</title>
+	<style type="text/css">
+		*{
+			/*perspective: 1000px;*/
+			perspective: 500px;
+			perspective-origin: top;
+			perspective-origin: bottom;
+			perspective-origin: left;
+			perspective-origin: right;
+			perspective-origin: left top;
+			perspective-origin: left bottom;
+			perspective-origin: right top;
+			perspective-origin: right bottom;
+			perspective-origin: 0 bottom;
+			perspective-origin:50% bottom;
+			perspective-origin:100% bottom;
+
+			perspective-origin:0 top;
+			perspective-origin:50% top;
+			perspective-origin:100% top;
+
+			
+		}
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		/*.container{
+			perspective: 500px;
+		}*/
+		img{
+			width: 250px;
+			transition:transform 2s;
+		}
+		img:hover{
+			/*transform: translateZ(300px);*/
+			transform: translateZ(250px);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="img/icon2.jpg" alt='actor'>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Transform rotate
+	</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			background-color: gray;
+
+		}
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background-color: red;
+			color: #fff;
+			margin: 20px 0;
+			text-align: center;
+			line-height: 60px;
+		}
+		#rotate:hover{
+				transform: rotate(45deg);
+				transform: rotate(-45deg);
+				transform: rotate(90deg);
+				transform: rotate(-90deg);
+				transform: rotate(180deg);
+		}
+		#rotatex:hover{
+				transform: rotateX(45deg);
+				transform: rotateX(90deg);
+		}
+		#rotatey:hover{
+				transform: rotateY(-45deg);
+				transform: rotateY(90deg);/*disapper*/
+		}
+		img{
+			width: 200px;
+			display: block;
+			margin:auto;
+			transition: transform 4s;
+		}
+		img:hover{
+				transform: rotate(45deg);
+				transform: rotate(90deg);
+				transform: rotate(180deg);
+				transform: rotate(-180deg);
+				transform: rotate(360deg);
+				transform: rotate(1turn);
+				/*400grad=360deg
+				/*transform: rotate(-0.5turn);*/
+				/*transform: rotate(-1.5turn);*/
+				/*transform: rotate(400grad);*/
+				/*transform: rotate(-200grad);*/
+		}
+	</style>
+</head>
+<body>
+		<div class="container">
+			<div id="rotate" class="move"> Rotate Me</div>
+		</div>
+		<div class="container">
+			<div id="rotatex" class="move"> Rotate Me X</div>
+		</div>
+		<div class="container">
+			<div id="rotatey" class="move"> Rotate Me Y</div>
+		</div>
+		<div>
+			<img src="img/icon2.jpg">
+		</div>
+</body>
+</html>
+<!-- rotate(xy)
+rotate(x)
+rotate(y) -->

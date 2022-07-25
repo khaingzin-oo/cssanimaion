@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		a{
+			text-decoration: none;
+			border:5px solid #444;
+			padding: 40px 80px;
+			font-size: 40px;
+			position: relative;
+			display: block;
+			margin-bottom:20px;
+		}
+		a::before{
+			content: "Hover Me";
+
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			background-color: steelblue;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			text-align: center;
+			line-height: 3.5;
+			transform: rotate(90deg);
+			transform-origin: right;
+			transition: transform 2s;
+			z-index: -1;
+
+		}
+		a:hover::before{
+			transform: rotate(0);
+		}
+
+		button{
+			background: none;
+			border:5px solid #444;
+			padding: 40px 80px;
+			font-size: 40px;
+			position: relative;
+			overflow: hidden;
+
+		}
+		button::before{
+			content: "Hover Me";
+
+			width: 100%;
+			height: 100%;
+			background-color: steelblue;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: translate(100%,-100%);
+			transition: transform 2s;
+			z-index: -1;
+		}
+		button:hover::before{
+			transform: translate(0);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<a href="#">Hover Me</a>
+		<button type="button">Hover Me</button>
+	</div>
+	
+</body>
+</html>
